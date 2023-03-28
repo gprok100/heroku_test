@@ -50,7 +50,7 @@ app.get('/date',(req,res)=>{
 
 app.get('/home',(req,res)=>{
     main()
-    res.render(`\nReading from address ${address}
+    res.send(`\nReading from address ${address}
     \n Name: ${name}
     \nSymbol: ${symbol}
     \nTotal Supply: ${totalSupply}
