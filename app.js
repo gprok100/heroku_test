@@ -18,7 +18,7 @@ console.log(key)
 const hash = '0xlsh76924nfhsln3ksd8fhsl9shn02h320'
 
 const ERC20_ABI =[
-    // 'function name() view returns(string)',
+    'function name() view returns(string)',
     'function symbol() view returns(string)',
     'function totalSupply() view returns(uint256)',
     'function balanceOf(address) view returns(uint)'
