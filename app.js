@@ -48,13 +48,17 @@ app.get('/date',(req,res)=>{
     res.render('showdate')
 })
 
-app.get('/home',(req,res)=>{
-    main()
-    res.send(`\nReading from address ${address}
-    \n Name: ${name}
-    \nSymbol: ${symbol}
-    \nTotal Supply: ${totalSupply}
-    \nBalance: ${ethers.utils.formatEther(balance)}
+app.get('/home',async(req,res)=>{
+    try{
+        main()
+    }catch(err){
+        console.log('error: ',err)
+    }
+    res.send(`\nReading from address ${await address}
+    \n Name: ${await name}
+    \nSymbol: ${await symbol}
+    \nTotal Supply: ${ await totalSupply}
+    \nBalance: ${ethers.utils.formatEther(await balance)}
     `)
 })
 
