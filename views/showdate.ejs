@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DATE</h1>
+    <div class="date"></div>
+    <div class="hash"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        
+        const date = document.querySelector('.date')
+        const hash = document.querySelector('.hash')
+        setInterval(async()=>{
+            date.innerText = Date().slice(16,24) 
+            const info = await axios.get(`/api`)
+            hash.innerText = info.data.hash
+        },1000)
+        console.log('hello')
+        
+       
+
+    </script>
+</body>
+</html>
