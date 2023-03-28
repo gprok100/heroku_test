@@ -17,7 +17,7 @@ app.get('/',(req,res)=>{
 })
 
 app.get('/date',(req,res)=>{
-    res.render('showdate.ejs')
+    res.render('showdate')
 })
 
 app.get('/api',(req,res)=>{
