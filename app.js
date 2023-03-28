@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 require('dotenv').config()
 const path = require('path')
+const ejsMate = require('ejs-mate')
 app.set('view engine','ejs')
+app.engine('ejs',ejsMate)
 
 app.set('views',path.join(__dirname,'/views'))
 
@@ -13,7 +15,7 @@ console.log(key)
 const hash = '0xlsh76924nfhsln3ksd8fhsl9shn02h320'
 
 app.get('/',(req,res)=>{
-    res.send(`Heroku testing and key is ${key}`)
+    res.send(`Heroku testing again and key is ${key}`)
 })
 
 app.get('/date',(req,res)=>{
