@@ -20,6 +20,10 @@ app.get('/date',(req,res)=>{
     res.render('showdate')
 })
 
+app.get('/home',(req,res)=>{
+    res.render('home')
+})
+
 app.get('/api',(req,res)=>{
     res.json({hash})
 })
