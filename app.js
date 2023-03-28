@@ -6,7 +6,7 @@ const key = process.env.MY_KEY
 console.log(key)
 
 app.get('/',(req,res)=>{
-    res.send('Heroku Test and key is : ',key)
+    res.send(`Heroku testing and key is ${key}`)
 })
 
 const port = process.env.PORT ||4000
