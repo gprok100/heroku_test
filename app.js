@@ -1,3 +1,6 @@
+const ethers = require('ethers')
+const provider = new ethers.providers.WebSocketProvider('wss://wss-testnet.5ire.network/')
+
 const express = require('express')
 const app = express()
 require('dotenv').config()
